@@ -38,6 +38,10 @@ html, body {
     color: white;
 }
 
+.fa-cart-plus {
+    color: black;
+}
+
 .cart-button__container {
     margin-top: 5px;
 }
@@ -199,19 +203,6 @@ html, body {
 .products__title {
     display: flex;
     justify-content: center;
-}
-
-.product__container {
-    padding: 5px;
-    width: 400px;
-    height: 400px;
-    margin-top: 10px;
-    
-    line-height: 150px;
-    color: white;
-    font-weight: bold;
-    font-size: 3em;
-    text-align: center;
 }
 
 .product__image-container {
