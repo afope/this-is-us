@@ -17,7 +17,7 @@ import shopImage from "../img/home-image-shop.png";
      }
 
      componentDidMount() {
-         fetch('https://api.instagram.com/v1/users/213826486/media/recent/?access_token=213826486.1677ed0.11bbaf4445184fee933ad59ec905e768').
+         fetch('https://api.instagram.com/v1/users/3218629328/media/recent/?access_token=3218629328.1677ed0.9589547d547443aba66bd21068f7f615').
          then(results => {
              console.log('results', results.json())
          }).catch(error => console.log('error', error));

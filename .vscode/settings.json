@@ -1,3 +1,6 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "prettier.eslintIntegration": true,
+    "prettier.jsxBracketSameLine": true,
+    "prettier.singleQuote": true
 }

@@ -9,6 +9,7 @@
     "grap": "^1.0.0",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
+    "jshint": "^2.10.2",
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23"
   }
 }

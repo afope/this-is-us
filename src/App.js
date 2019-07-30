@@ -9,25 +9,30 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ProductList from './components/ProductList';
 import Details from './components/Details';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import Default from './components/Default';
 import Home from './components/Home';
+import Modal from './components/Modal';
+import About from './components/About';
 
-
+const client = new ApolloClient({
+  uri: '[Insert URI of GraphQL endpoint]'
+});
 
 function App() {
   return (
     <Fragment>
       <NavBar />
-       <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop" component={ProductList} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Default} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/shop" component={ProductList} />
+        <Route path="/details" component={Details} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/about" component={About} />
+        <Route component={Default} />
       </Switch>
-  
-    </ Fragment>
+      <Modal />
+    </Fragment>
   );
 }
 
