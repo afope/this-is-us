@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
+import { ButtonContainer } from './Button';
 
 export default class Product extends Component {
   render() {
@@ -18,21 +19,15 @@ export default class Product extends Component {
                 <Link to="/details">
                   <img src={img} className="product__image" alt="product" />
                 </Link>
-                <button
-                  className="cart-btn"
-                  disabled={!inCart ? true : false}
+                <ButtonContainer
+                  cart
+                  disabled={inCart ? true : false}
                   onClick={() => {
                     value.addToCart(id);
                     value.openModal(id);
                   }}>
-                  {inCart ? (
-                    <p className="text-capitalize mb-0" disabled>
-                      In cart
-                    </p>
-                  ) : (
-                    <i className="fas fa-cart-plus" />
-                  )}
-                </button>
+                  {inCart ? 'In Cart' : <i className="fas fa-cart-plus" />}
+                </ButtonContainer>
               </div>
             )}
           </ProductConsumer>
