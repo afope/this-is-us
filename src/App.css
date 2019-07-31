@@ -182,6 +182,8 @@ body {
 .masonry__layout {
     display: flex;
     justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .home__mantra {
