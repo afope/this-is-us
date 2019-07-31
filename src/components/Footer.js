@@ -10,13 +10,19 @@ export default class Footer extends Component {
   render() {
     return (
       <section className="footer">
-        <Link to="/shop">Shop</Link>
-        <Link to="/about">About</Link>
-        <Link>Contact Us</Link>
+        <Link to="/shop">
+          <strong> Shop </strong>{' '}
+        </Link>{' '}
+        <Link to="/about">
+          <strong> About </strong>{' '}
+        </Link>{' '}
+        <Link>
+          <strong> Contact Us </strong>{' '}
+        </Link>{' '}
         <Link className="footer__copyright">
-          Copyright 2019 This is Us Nigeria ltd
-        </Link>
-        <Link>Privacy policy</Link>
+          Copyright 2019 This is Us Nigeria ltd{' '}
+        </Link>{' '}
+        <Link> Privacy policy </Link>{' '}
       </section>
     );
   }
