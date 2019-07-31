@@ -14,6 +14,7 @@ import Default from './components/Default';
 import Home from './components/Home';
 import Modal from './components/Modal';
 import About from './components/About';
+import Footer from './components/Footer';
 
 const client = new ApolloClient({
   uri: '[Insert URI of GraphQL endpoint]'
@@ -31,6 +32,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route component={Default} />
       </Switch>
+      <Footer />
       <Modal />
     </Fragment>
   );

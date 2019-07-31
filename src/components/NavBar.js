@@ -14,28 +14,25 @@ export default class NavBar extends Component {
           <ul>
             <li>
               <Link to="/" className="nav__link">
-                Home
-                <span>&#8226;</span>
+                Home <span> &#8226;</span>
               </Link>
               <Link to="/shop" className="nav__link">
-                Shop
-                <span>&#8226;</span>
+                Shop <span> &#8226;</span>
               </Link>
               <Link to="/about" className="nav__link">
-                About
-                <span>&#8226;</span>
+                About <span> &#8226;</span>
               </Link>
             </li>
           </ul>
           <Link to="/cart">
             <ButtonContainer className="cart-button__container">
-              <i className="fas fa-cart-plus" />
-            </ButtonContainer>
+              <i className="fas fa-shopping-cart" />
+            </ButtonContainer>{' '}
           </Link>
         </section>
         <Link to="/">
           <img src={logo} alt="website logo" className="logo justify-start" />
-        </Link>
+        </Link>{' '}
         <i class="fas fa-chevron-down fa-sm" />
       </NavWrapper>
     );
@@ -43,7 +40,7 @@ export default class NavBar extends Component {
 }
 
 const NavWrapper = styled.nav`
-  background: var(--deepIndigo);
+  background: var(--mainBlue);
   a {
     color: var(--mainWhite);
     font-size: 1rem;

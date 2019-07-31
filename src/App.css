@@ -1,5 +1,6 @@
 :root {
     --deepIndigo: #000267;
+    --mainBlue: #02244E;
     --darkBlue: #061b67;
     --navyBlue: #003399;
     --skyBlue: #6db4fc;
@@ -39,12 +40,14 @@ body {
     color: white;
 }
 
-.fa-cart-plus {
-    color: black;
+.fa-shopping-cart {
+    color: white;
+    font-size: 1.5rem;
 }
 
 .cart-button__container {
     margin-top: 5px;
+    border: none;
 }
 
 .nav__container {
@@ -52,6 +55,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background: var(--mainBlue);
 }
 
 .nav {
@@ -125,64 +129,6 @@ body {
     color: var(--deepIndigo);
 }
 
-.home__grid {
-    width: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    background: var(--deepIndigo);
-}
-
-.home__grid-first__row {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    background: var(--deepIndigo);
-    height: auto;
-    margin-bottom: 30px;
-}
-
-.home__grid-first__row__image-one {
-    width: 48%;
-}
-
-.home__grid-first__row__image-two {
-    width: 48%;
-    background: var(--mainWhite);
-}
-
-.home__grid-second__row {
-    width: 70%;
-    background: var(--mainWhite);
-    height: 300px;
-}
-
-.home__grid-third__row {
-    width: 70%;
-    background: var(--mainWhite);
-    height: 300px;
-}
-
-.home__grid-fourth__row {
-    width: 70%;
-    background: var(--mainWhite);
-    height: 300px;
-}
-
-.home__grid-fifth__row {
-    width: 70%;
-    background: var(--mainWhite);
-    height: 300px;
-}
-
-.home__grid-sixth__row {
-    width: 70%;
-    background: var(--mainWhite);
-    height: 300px;
-}
-
 .products__container {
     padding: 0;
     margin: 0;
@@ -231,4 +177,43 @@ body {
 
 .fa-trash {
     color: black;
+}
+
+.masonry__layout {
+    display: flex;
+    justify-content: center;
+}
+
+.home__mantra {
+    background: var(--mainBlue);
+    height: auto;
+    padding-bottom: 50px;
+    color: var(--mainWhite);
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-bottom: 40px;
+}
+
+.footer {
+    background: var(--mainBlue);
+    color: var(--mainWhite);
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 4rem;
+}
+
+.footer a {
+    color: var(--mainWhite);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer__copyright {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
