@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { fetchProducts } from './utils/api';
 
 // - data
 import { storeProducts, defaultProduct, detailProduct } from './data';
@@ -18,18 +19,15 @@ class ProductProvider extends Component {
   };
 
   componentDidMount() {
-    this.setProducts();
+    fetchProducts()
+      .then((products) => this.setProducts(products))
+      .catch(e => console.log(e))
   }
 
-  setProducts = () => {
-    let tempProducts = [];
-    storeProducts.forEach(item => {
-      const singleItem = { ...item };
-      tempProducts = [...tempProducts, singleItem];
-      this.setState(() => {
-        return { products: tempProducts };
-      });
-    });
+  setProducts = (products) => {
+    this.setState({
+        products,
+    })
   };
 
   getItem = id => {
