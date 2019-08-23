@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 // - components
-import Product from './Product';
 import { ProductConsumer } from '../context';
+
+import Productcontainer from './Shop/Productcontainer';
 
 export default class ProductList extends Component {
 
@@ -10,11 +11,12 @@ export default class ProductList extends Component {
     return (
         <section className="products__container">
           <ProductConsumer>
-            {(value) => {
-              return value.products.map( product => {
-                return <Product product={product} key={product.id} />
-              })
-            }}
+            {
+              (value) =>
+              <Productcontainer
+                products={value.products}
+              />
+            }
           </ProductConsumer>
         </section>
     )
