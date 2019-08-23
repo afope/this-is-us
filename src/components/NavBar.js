@@ -33,7 +33,7 @@ export default class NavBar extends Component {
         <Link to="/">
           <img src={logo} alt="website logo" className="logo justify-start" />
         </Link>{' '}
-        <i class="fas fa-chevron-down fa-sm" />
+        <i className="fas fa-chevron-down fa-sm" />
       </NavWrapper>
     );
   }
