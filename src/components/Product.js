@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
@@ -9,33 +9,33 @@ export default class Product extends Component {
   render() {
     const { id, title, img, price, inCart } = this.props.product;
     return (
-      <ProductWrapper>
-        <div className="product__container">
           <ProductConsumer>
             {value => (
               <div
-                className="product__image-container"
-                onClick={() => value.handleDetail(id)}>
-                <Link to="/details">
-                  <img src={img} className="product__image" alt="product" />
-                </Link>
-                <ButtonContainer
-                  cart
-                  disabled={inCart ? true : false}
-                  onClick={() => {
-                    value.addToCart(id);
-                    value.openModal(id);
-                  }}>
-                  {inCart ? 'In Cart' : <i className="fas fa-cart-plus" />}
-                </ButtonContainer>
+                className="col-lg-4 col-xs-12"
+                onClick={() => value.handleDetail(id)}
+              >
+                <div class="box" style={{border: '1px solid green', textAlign:'center'}}>
+                  <Link to="/details">
+                    <img src={img} className="product__image" alt="product" />
+                  </Link>
+                  <ButtonContainer
+                    cart
+                    disabled={inCart ? true : false}
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}>
+                    {inCart ? 'In Cart' : <i className="fas fa-cart-plus" />}
+                  </ButtonContainer>
+                    <div className="card-footer">
+                      <p>{title}</p>
+                      <h5> $ {price} </h5>
+                    </div>
+                </div>
               </div>
             )}
           </ProductConsumer>
-          <div className="card-footer">
-            <p> {title} </p> <h5> $ {price} </h5>
-          </div>
-        </div>
-      </ProductWrapper>
     );
   }
 }
