@@ -199,6 +199,44 @@ body {
     margin-bottom: 40px;
 }
 
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--lightBlue);
+}
+
+.about h3 {
+    text-align: center;
+}
+
+.about .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about .row p {
+    width: 50%;  
+    font-weight: lighter;
+    line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .about .row p {
+        width: 70%;  
+    }   
+  }
+
+.about .about-img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 60%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
 .footer {
     background: var(--mainBlue);
     color: var(--mainWhite);
