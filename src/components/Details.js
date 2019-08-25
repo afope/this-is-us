@@ -8,20 +8,21 @@ export default class Details extends Component {
     return (
       <ProductConsumer>
         {(value) => {
-          console.log(value.detailProduct)
+          console.log('detail product', value.detailProduct)
           const { id, company, title, img, info, price, inCart } = value.detailProduct;
           return (
             <div>
               <div>
+
+                <div className="details">
+                  <img src={img}>
+
+                  </img>
+
+                </div>
                 <h1>
                   { title }
                 </h1>
-                <h4>
-                  made by: <span className="text-uppercase">{company}</span>
-                </h4>
-                <h4>
-                  price: $ <span className="text-uppercase">{price}</span>
-                </h4>
                 <p>
                   {info}
                 </p>
@@ -33,9 +34,9 @@ export default class Details extends Component {
                   </ButtonContainer>
                   </Link>
 
-                  <ButtonContainer 
-                  cart 
-                  disabled={inCart? true: false} 
+                  <ButtonContainer
+                  cart
+                  disabled={inCart? true: false}
                   onClick={()=>{
                     value.addToCart(id);
                     value.openModal(id);

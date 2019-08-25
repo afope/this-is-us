@@ -6,6 +6,7 @@ const Productcontainer = (props) => {
 
     return (
         <div class="row">
+          {console.log('props')}
             {
                 props.products.map(product => <Product product={product} key={product.id} />)
             }

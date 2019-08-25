@@ -15,23 +15,15 @@ export default class Product extends Component {
                 className="col-lg-4 col-xs-12"
                 onClick={() => value.handleDetail(id)}
               >
-                <div class="box" style={{border: '1px solid green', textAlign:'center'}}>
+                <div className="box">
                   <Link to="/details">
                     <img src={img} className="product__image" alt="product" />
                   </Link>
-                  <ButtonContainer
-                    cart
-                    disabled={inCart ? true : false}
-                    onClick={() => {
-                      value.addToCart(id);
-                      value.openModal(id);
-                    }}>
-                    {inCart ? 'In Cart' : <i className="fas fa-cart-plus" />}
-                  </ButtonContainer>
-                    <div className="card-footer">
-                      <p>{title}</p>
-                      <h5> $ {price} </h5>
-                    </div>
+                </div>
+                <div className="card-footer">
+                  <Link to="/details">
+                    <p>{title}</p>
+                  </Link>
                 </div>
               </div>
             )}
