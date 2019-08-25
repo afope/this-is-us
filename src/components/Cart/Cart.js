@@ -7,19 +7,41 @@ import EmptyCart from './EmptyCart';
 import { ProductConsumer } from '../../context';
 
 export default class Cart extends Component {
+
+  // with this function we can manipulate/normalize the cart data
+  modifyCart = (cart) => {
+    return cart.map((cartItem) => {
+      if(!cartItem.count) {
+        return {
+          ...cartItem,
+          count: 1,
+        }
+      } else  {
+        return cartItem;
+      }
+    })
+  }
+
+
   render() {
     return (
       <section>
         <ProductConsumer>
           {value => {
             const { cart } = value;
-            if (cart.length > 0) {
+            let modifiedCart = this.modifyCart(cart);
+            let modifiedValue = {
+              ...value,
+              cart: modifiedCart
+            }
+
+            if (cart.length) {
               return (
                 <Fragment>
                   <Title name="Your" title="cart" />
                   <CartColumns />
-                  <CartList value={value} />
-                  <CartTotals value={value} />
+                  <CartList value={modifiedValue} />
+                  <CartTotals value={modifiedValue} />
                 </Fragment>
               );
             } else {

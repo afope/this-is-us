@@ -9,16 +9,12 @@ export default class Details extends Component {
       <ProductConsumer>
         {(value) => {
           console.log('detail product', value.detailProduct)
-          const { id, company, title, img, info, price, inCart } = value.detailProduct;
+          const { id, title, img, info, price, inCart } = value.detailProduct;
           return (
             <div>
               <div>
-
                 <div className="details">
-                  <img src={img}>
-
-                  </img>
-
+                  <img src={img}/>
                 </div>
                 <h1>
                   { title }
