@@ -6,7 +6,6 @@ export default function CartTotals({ value }) {
 
   return (
     <Fragment>
-      <div>
         <Link to="/shop">
           <button
             className="btn btn-outline-danger text-uppercase"
@@ -29,7 +28,6 @@ export default function CartTotals({ value }) {
           <span> total: </span>
           <strong>$ {cartTotal} </strong>
         </h5>
-      </div>
     </Fragment>
   );
 }

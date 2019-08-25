@@ -7,7 +7,7 @@ const Productcontainer = (props) => {
     return (
         <div className="row center">
             {
-                props.products.map(product => <Product product={product} key={product.id} />)
+                props.products && props.products.map(product => <Product product={product} key={product.id} />)
             }
         </div>
     );
