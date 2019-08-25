@@ -1,8 +1,6 @@
 import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import ApolloClient from 'apollo-boost';
 
-import logo from './logo.svg';
 import './App.css';
 
 // - components
@@ -16,9 +14,6 @@ import Modal from './components/Modal';
 import About from './components/About';
 import Footer from './components/Footer';
 
-const client = new ApolloClient({
-  uri: '[Insert URI of GraphQL endpoint]'
-});
 
 function App() {
   return (

@@ -19,6 +19,17 @@ class ProductProvider extends Component {
   };
 
   componentDidMount() {
+    this.handleFetch();
+  }
+
+  componentDidUpdate() {
+    // should probably pull this from storage instead of making another api call
+    if (this.state.products === undefined) {
+      this.handleFetch();
+    }
+  }
+
+  handleFetch = () => {
     fetchProducts()
       .then((products) => this.setProducts(products))
       .catch(e => console.log(e))
