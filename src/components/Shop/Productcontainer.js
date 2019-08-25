@@ -5,7 +5,7 @@ import Product from '../Product';
 const Productcontainer = (props) => {
 
     return (
-        <div class="row center">
+        <div className="row center">
             {
                 props.products.map(product => <Product product={product} key={product.id} />)
             }

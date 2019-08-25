@@ -1,15 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 // - components
-import MasonryLayout from './Masonry';
-import Test from './Utils/Test';
-
-
-const masonryOptions = {
-  transitionDuration: 0
-};
-
-const imagesLoadedOptions = { background: '.my-bg-image-el' };
+import ResonsiveGrid from './Utils/ResonsiveGrid';
 
 class Home extends Component {
   constructor() {
@@ -20,15 +12,24 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      'https://api.instagram.com/v1/users/3218629328/media/recent/?access_token=3218629328.1677ed0.9589547d547443aba66bd21068f7f615&count=50'
-    )
-      .then(results => {
-        return results.json();
-      })
-      .then(data => {
-        this.setState({ data: data.data });
-      });
+    if (sessionStorage.getItem('igdata') === null) {
+      fetch(
+        'https://api.instagram.com/v1/users/3218629328/media/recent/?access_token=3218629328.1677ed0.9589547d547443aba66bd21068f7f615&count=50'
+      )
+        .then(results => {
+          return results.json();
+        })
+        .then(data => {
+          this.setState({ data: data.data });
+        }).then(() => {
+          sessionStorage.setItem('igdata', JSON.stringify(this.state.data))
+        });
+    } else {
+      const igData = sessionStorage.getItem('igdata');
+      this.setState({ data: JSON.parse(igData) });
+
+    }
+
   }
 
   render() {
@@ -47,26 +48,17 @@ class Home extends Component {
           <strong>THISISUS&trade;</strong>{' '}
         </section>
         <section className="masonry__layout">
-          {/* <MasonryLayout columns={3} gap={25}>
-            {this.state.data.map((item, i) => {
-              return (
-                <div key={i}>
-                  <img src={item.images.low_resolution.url} />
-                </div>
-              );
-            })}
-          </MasonryLayout> */}
-          <Test large={4} xs={12}>
+          <ResonsiveGrid>
             {this.state.data.map((item, i) => {
                 return (
-                  <div key={i} className="col-lg-4">
-                      <div className="box" style={{border:'1px solid red'}}>
-                        <img src={item.images.low_resolution.url} />
+                  <div key={i} className="col-lg-4 col-xs-12">
+                      <div className="box">
+                        <img className="home__img" src={item.images.low_resolution.url} />
                       </div>
                   </div>
                 );
               })}
-          </Test>
+          </ResonsiveGrid>
         </section>
       </Fragment>
     );
