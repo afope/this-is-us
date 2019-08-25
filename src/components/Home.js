@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 
 // - components
 import MasonryLayout from './Masonry';
+import Test from './Utils/Test';
+
 
 const masonryOptions = {
   transitionDuration: 0
@@ -26,13 +28,11 @@ class Home extends Component {
       })
       .then(data => {
         this.setState({ data: data.data });
-        console.log('data', this.state.data);
       });
   }
 
   render() {
     const childElements = this.state.data.map(function(item) {
-      console.log('item', item);
       return <img src={item.images.low_resolution.url} />;
     });
 
@@ -46,18 +46,27 @@ class Home extends Component {
           our products. We are proud of our people. We are proud of our nation.{' '}
           <strong>THISISUS&trade;</strong>{' '}
         </section>
-
         <section className="masonry__layout">
-          <MasonryLayout columns={3} gap={25}>
+          {/* <MasonryLayout columns={3} gap={25}>
             {this.state.data.map((item, i) => {
-              const height = 200 + Math.ceil(Math.random() * 300);
               return (
                 <div key={i}>
                   <img src={item.images.low_resolution.url} />
                 </div>
               );
             })}
-          </MasonryLayout>
+          </MasonryLayout> */}
+          <Test large={4} xs={12}>
+            {this.state.data.map((item, i) => {
+                return (
+                  <div key={i} className="col-lg-4">
+                      <div className="box" style={{border:'1px solid red'}}>
+                        <img src={item.images.low_resolution.url} />
+                      </div>
+                  </div>
+                );
+              })}
+          </Test>
         </section>
       </Fragment>
     );
