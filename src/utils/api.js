@@ -9,3 +9,11 @@ export const fetchProducts = () => {
             .catch((error) => reject(error));
     });
 }
+
+export const fetchProduct = (id) => {
+    return new Promise((resolve, reject) => {
+        axios.get(`${PROXY_URL}/product/${id}`)
+            .then(response => resolve(response.data.product))
+            .catch((error) => reject(error));
+    });
+}

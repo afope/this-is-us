@@ -53,7 +53,10 @@ class Home extends Component {
                 return (
                   <div key={i} className="col-lg-4 col-xs-12">
                       <div className="box">
-                        <img className="home__img" src={item.images.low_resolution.url} />
+                        <img
+                          className="home__img"
+                          style={{ width:'420px', height: '420px'}}
+                          src={item.images.standard_resolution.url} />
                       </div>
                   </div>
                 );
