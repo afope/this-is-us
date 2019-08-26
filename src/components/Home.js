@@ -23,13 +23,13 @@ class Home extends Component {
           this.setState({ data: data.data });
         }).then(() => {
           sessionStorage.setItem('igdata', JSON.stringify(this.state.data))
+        }).catch(error => {
+          console.log('error', error)
         });
     } else {
       const igData = sessionStorage.getItem('igdata');
       this.setState({ data: JSON.parse(igData) });
-
     }
-
   }
 
   render() {
@@ -43,7 +43,7 @@ class Home extends Component {
           <strong>THISISUS&trade;</strong> We create value. We believe in the
           work of our hands. We use local resources to serve local communities.
           We imagine experiences and design possibilities. We work together. We
-          celebrate what we have and create what we don 't have. We are proud of
+          celebrate what we have and create what we don't have. We are proud of
           our products. We are proud of our people. We are proud of our nation.{' '}
           <strong>THISISUS&trade;</strong>{' '}
         </section>

@@ -7,7 +7,7 @@ import { ButtonContainer } from './Button';
 
 export default class Product extends Component {
   render() {
-    const { id, title, img, price, inCart } = this.props.product;
+    const { id, title, image, price, img, src, inCart } = this.props.product;
     return (
           <ProductConsumer>
             {value => (
@@ -17,7 +17,7 @@ export default class Product extends Component {
               >
                 <div className="box">
                   <Link to={`/details/${id}`}>
-                    <img src={img} className="product__image" alt="product" />
+                    <img src={image.src} style={{ width:'100%', height: '100%',}} className="product__image" alt="product" />
                   </Link>
                 </div>
                 <div className="card-footer">

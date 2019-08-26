@@ -204,7 +204,11 @@ body {
     text-align: center;
     padding-right: 3rem;
     padding-left: 3rem;
-    margin-bottom: 40px;
+}
+
+.masonry__layout {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .about {
@@ -228,12 +232,6 @@ body {
     font-weight: lighter;
     line-height: 1.5rem;
 }
-
-@media only screen and (max-width: 600px) {
-    .about .row p {
-        width: 70%;
-    }
-  }
 
 .about .about-img {
     width: 200px;
@@ -269,6 +267,7 @@ body {
 
 .box {
   margin: 2rem;
+  margin-bottom: 0.2rem;
   background-color: #F8F7F5;
 }
 
@@ -281,8 +280,14 @@ body {
   color: black;
 }
 
+.box img {
+  width: 100%;
+  max-height: 650px;
+}
+
 .card-footer {
   margin: 2rem;
+  margin-top: 0.5rem;
   font-size: 13px;
   line-height: 19px;
 }
@@ -295,4 +300,70 @@ body {
 .card-footer a:hover {
   text-decoration: underline;
   color: #000;
+}
+
+.details {
+  width: 30%;
+  margin-right: 6rem;
+}
+
+.product__details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.product__info{
+  height: 300px;
+  width: 30%;
+}
+
+.product__image {
+  height: 700px;
+  width: 100%;
+}
+
+body.modal--open {
+    overflow: hidden;
+}
+
+.modal__image {
+  width: 200px;
+  height: 200px;
+  margin: 2rem;
+}
+
+.modal__content {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .about .row p {
+      width: 70%;
+  }
+
+  .product__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    margin-bottom: 0;
+  }
+
+  .product__info {
+    width: 80%;
+  }
+
+  .details {
+    width: 90%;
+    margin-right: 0;
+  }
 }

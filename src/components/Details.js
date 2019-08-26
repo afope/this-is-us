@@ -29,7 +29,15 @@ export default class Details extends Component {
     this._isUnmounted = true;
   }
 
+
   render() {
+    const { product } = this.state;
+    const { title, body_html, image, id} = product;
+    const { detailProduct } = this.props;
+
+    console.log('product', product)
+    console.log('detail product', this.props.detailProduct);
+
     return (
       <ProductConsumer>
         {(value) => {
@@ -37,20 +45,27 @@ export default class Details extends Component {
             // this is a mutation though :sad:
             value.detailProduct = this.state.product;
           }
-          const { id, title, img, info, inCart } = value.detailProduct;
+
+          const { inCart } = value;
+
           return (
             <div>
-              <div>
-                <div className="details">
-                  <img src={img}/>
-                </div>
-                <h1>
-                  {title}
-                </h1>
-                <p>
-                  {info}
-                </p>
-                <div>
+              <div className="product__details">
+                {image ? (
+                  <div className="details">
+                  <img src={image.src} className="product__image" />
+                  </div>
+                ) : <p>no image yet</p>
+              }
+
+
+                <div className="product__info">
+                  <h4>
+                    {title}
+                  </h4>
+                  <p>
+                    {body_html}
+                  </p>
                   <Link to="/shop">
                   <ButtonContainer>
                     Back to Products
@@ -66,9 +81,6 @@ export default class Details extends Component {
                     {inCart ? 'In Cart' : 'Add to Cart'}
                   </ButtonContainer>
                 </div>
-              </div>
-              <div>
-                <img src={img} />
               </div>
             </div>
           )

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { fetchProducts } from './utils/api';
 
 // - data
-import { storeProducts, defaultProduct, detailProduct } from './data';
 
 const ProductContext = React.createContext();
 
@@ -12,10 +11,11 @@ class ProductProvider extends Component {
     detailProduct: {},
     cart: [],
     modalOpen: false,
-    modalProduct: detailProduct,
+    modalProduct: [],
     cartSubTotal: 0,
     cartTax: 0,
-    cartTotal: 0
+    cartTotal: 0,
+    product: {},
   };
 
   componentDidMount() {
@@ -76,6 +76,7 @@ class ProductProvider extends Component {
     this.setState(() => {
       return { modalProduct: product, modalOpen: true };
     });
+    document.querySelector('body').classList.toggle('modal--open');
   };
 
   closeModal = () => {
