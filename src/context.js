@@ -83,6 +83,7 @@ class ProductProvider extends Component {
     this.setState(() => {
       return { modalOpen: false };
     });
+    document.querySelector('body').classList.toggle('modal--open');
   };
 
   increment = id => {
