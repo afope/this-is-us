@@ -16,12 +16,12 @@ export default class Product extends Component {
                 onClick={() => value.handleDetail(id)}
               >
                 <div className="box">
-                  <Link to="/details">
+                  <Link to={`/details/${id}`}>
                     <img src={img} className="product__image" alt="product" />
                   </Link>
                 </div>
                 <div className="card-footer">
-                  <Link to="/details">
+                  <Link to={`/details/${id}`}>
                     <p>{title}</p>
                   </Link>
                 </div>
