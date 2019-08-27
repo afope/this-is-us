@@ -17,3 +17,12 @@ export const fetchProduct = (id) => {
             .catch((error) => reject(error));
     });
 }
+
+export const fetchInventoryItem = (id) => {
+    return new Promise((resolve, reject) => {
+        axios.get(`${PROXY_URL}/inventory_item/${id}`)
+            .then(response => resolve(response.data.inventory_item))
+            .catch((error) => reject(error));
+    });
+}
+

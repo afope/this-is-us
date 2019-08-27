@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchProducts } from './utils/api';
+import {isEmpty} from './utils/index';
 
 // - data
 
@@ -48,22 +49,44 @@ class ProductProvider extends Component {
 
   handleDetail = id => {
     const product = this.getItem(id);
+
     this.setState(() => {
       return { detailProduct: product };
     });
   };
 
-  addToCart = id => {
+  handleAddItemToCart = (cart, newCartItem) => {
+     let itemInCart = cart.find((item) => {
+       if (item.id === newCartItem.id) {
+         return item;
+       }
+     });
+      // this means the item is in the cart already
+      // now we modify the item count in the cart and return that
+     if (!isEmpty(itemInCart)) {
+        return cart.map((item) => {
+          if (cart.id === newCartItem) {
+            return {...item, count: item.count + 1}
+          } else {
+            return item;
+          }
+        })
+     }
+     return [...cart, newCartItem];
+  }
+
+
+  addToCart = (id, price) => {
     let tempProducts = [...this.state.products];
     const index = tempProducts.indexOf(this.getItem(id));
     const product = tempProducts[index];
     product.inCart = true;
     product.cart = 1;
-    const price = product.price;
-    product.total = price;
+    product.price = price;
+
     this.setState(
       () => {
-        return { products: tempProducts, cart: [...this.state.cart, product] };
+        return { products: tempProducts, cart: this.handleAddItemToCart(this.state.cart,product) };
       },
       () => {
         this.addTotals();
