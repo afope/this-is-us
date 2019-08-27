@@ -35,8 +35,6 @@ export default class Details extends Component {
     const { title, body_html, image, id} = product;
     const { detailProduct } = this.props;
 
-    console.log('product', product)
-    console.log('detail product', this.props.detailProduct);
 
     return (
       <ProductConsumer>
@@ -66,16 +64,19 @@ export default class Details extends Component {
                   <p>
                     {body_html}
                   </p>
+                  <p>
+                    <b>NGN {value.detailProduct && value.detailProduct.variants && value.detailProduct.variants[0].price}</b>
+                  </p>
                   <Link to="/shop">
-                  <ButtonContainer>
-                    Back to Products
-                  </ButtonContainer>
+                    <ButtonContainer>
+                      Back to Products
+                    </ButtonContainer>
                   </Link>
                   <ButtonContainer
                   cart
                   disabled={inCart? true: false}
                   onClick={() => {
-                    value.addToCart(id);
+                    value.addToCart(id, value.detailProduct.variants[0].price);
                     value.openModal(id);
                   }}>
                     {inCart ? 'In Cart' : 'Add to Cart'}
