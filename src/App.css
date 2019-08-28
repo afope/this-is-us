@@ -372,6 +372,101 @@ body.modal--open {
   border-radius: 1%;
 }
 
+
+.funtua_projects {
+  background: var(--mainBlue);
+}
+
+.funtua__mantra {
+  display: flex;
+  justify-content: center;
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.funtua__mantra-text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.5rem;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.funtua__mantra-text h3 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.funtua__mantra-text p {
+  text-align: left;
+}
+
+.funtua_banner--image {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.funtua_banner--image img {
+  width: 40%;
+  margin: 3rem;
+}
+
+.slide-container {
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 300px;
+}
+
+.each-fade {
+  display: flex;
+  align-items: center;
+}
+
+.each-fade .image-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.each-fade .image-container img {
+  height: 700px;
+  width: 700px;
+}
+
+.each-fade h2 {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: #adceed;
+}
+
+.react-slideshow-container .nav {
+  background: #fff;
+}
+
 @media only screen and (max-width: 600px) {
 
   .home__mantra {

@@ -49,7 +49,7 @@ export default class NavModal extends Component {
                           }}>
                         Sustainability
                       </Link>
-                      <Link to="/about" className="nav__link"  onClick={() => {
+                      <Link to="/funtua" className="nav__link"  onClick={() => {
                             value.toggleNav();
                           }}>
                         Funtua projects

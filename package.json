@@ -19,6 +19,7 @@
     "react-protected-mailto": "^1.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
+    "react-slideshow-image": "^1.2.2",
     "react-stack-grid": "^0.7.1",
     "styled-components": "^4.2.0"
   },
