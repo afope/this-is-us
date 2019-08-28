@@ -30,7 +30,7 @@ export default class FuntuaProjects extends Component {
       <div className="funtua-projects">
         <section className="funtua__mantra">
           <div className="funtua__mantra-text">
-            <h3>Funtua project</h3>
+            <h2>Funtua project</h2>
             <p>
               The Funtua Project started out of curiosity about Nigerian Fabric,
               which lead us on a search for locally grown, ginned, spun, woven
@@ -76,7 +76,7 @@ export default class FuntuaProjects extends Component {
 
         <section className="funtua__mantra">
           <div className="funtua__mantra-text">
-            <h3>Caption</h3>
+            <p>Caption</p>
             <p>Shop the collection</p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default class FuntuaProjects extends Component {
 
         <section className="funtua__mantra">
           <div className="funtua__mantra-text">
-            <h3>Caption</h3>
+            <p>Caption</p>
             <p>Shop the collection</p>
           </div>
         </section>
@@ -128,7 +128,7 @@ export default class FuntuaProjects extends Component {
     </div>
     <div>
     <h3>OUR COTTON</h3>
-    <p><strong>100% locally grown</strong></p>
+    <p>100% locally grown</p>
     <p>
     FUNTUA is the market lingo for the cotton which gets its name from the city in Katsina (Funtua) where the cotton is grown and spun
     </p>
@@ -175,15 +175,15 @@ export default class FuntuaProjects extends Component {
         </Fragment>
 
         <section className="funtua__mantra">
-          <div className="funtua__mantra-options">
-            <h3>Caption</h3>
+          <div className="funtua__mantra-text">
+            <p>Caption</p>
             <p>Shop</p>
           </div>
         </section>
 
         <section className="funtua__mantra">
           <div className="funtua__mantra-text">
-            <h3>Fabric and Totes</h3>
+            <p>Fabric and Totes</p>
             <p>
               Some text about about Fabric and Totes and then some photos below
               in a slide show
@@ -215,8 +215,8 @@ export default class FuntuaProjects extends Component {
         </Fragment>
 
         <section className="funtua__mantra">
-          <div className="funtua__mantra-options">
-            <h3>Caption</h3>
+          <div className="funtua__mantra-text">
+            <p>Caption</p>
             <p>Shop</p>
           </div>
         </section>

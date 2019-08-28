@@ -16,8 +16,9 @@ export default class Footer extends Component {
         <Link to="/about">
           <strong> About </strong>{' '}
         </Link>{' '}
-        <a href='mailto:thisisusng@gmail.com' target="_top">
-        <strong>Contact Us</strong></a>
+        <Link to="/contact">
+          <strong> Contact Us </strong>{' '}
+        </Link>{' '}
         <Link to="/" className="footer__copyright">
           Copyright 2019 This is Us Nigeria ltd{' '}
         </Link>{' '}
