@@ -233,29 +233,34 @@ header {
 }
 
 
-.about {
+.sustainability {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: var(--lightBlue);
+    background-color: var(--mainWhite);
 }
 
-.about h3 {
+.sustainability h3 {
     text-align: center;
+    font-size: 2rem;
 }
 
-.about .row {
+.sustainability .row {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-weight: normal;
 }
 
-.about .row p {
-    width: 50%;
-    font-weight: lighter;
-    line-height: 1.5rem;
+.sustainability .row p {
+    width: 60%;
+    line-height: 2rem;
+    font-size: 1.5rem;
 }
 
-.about .about-img {
+.sustainability .sustainability-img {
     width: 200px;
     max-width: 100%;
     height: 200px;
@@ -402,5 +407,9 @@ body.modal--open {
   .details {
     width: 90%;
     margin-right: 0;
+  }
+
+  .sustainability .row p {
+      width: 80%;
   }
 }

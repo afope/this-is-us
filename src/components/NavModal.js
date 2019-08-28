@@ -44,7 +44,7 @@ export default class NavModal extends Component {
                           }}>
                         About
                       </Link>
-                      <Link to="/about" className="nav__link"  onClick={() => {
+                      <Link to="/sustainability" className="nav__link"  onClick={() => {
                             value.toggleNav();
                           }}>
                         Sustainability
