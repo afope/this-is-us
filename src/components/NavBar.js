@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // - components
-import logo from '../Logo.svg';
+import logo from '../logo.svg';
 import { ButtonContainer } from './Button';
 
 export default class NavBar extends Component {

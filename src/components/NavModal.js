@@ -78,5 +78,6 @@ const NavModalContainer = styled.div`
   top: 0;
   lett: 0;
   bottom: 0;
-  background: #000;
+  background: var(--mainBlue);
+;
 `;
