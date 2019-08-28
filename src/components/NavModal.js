@@ -72,12 +72,13 @@ export default class NavModal extends Component {
 
 const NavModalContainer = styled.div`
   position: fixed;
+  z-index: 50;
   overflow: hidden;
   width: 100%;
   height: 100vh;
   top: 0;
   lett: 0;
   bottom: 0;
-  background: var(--deepIndigo);
+  background: var(--orange);
 ;
 `;

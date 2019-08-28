@@ -15,6 +15,7 @@ import Modal from './components/Modal';
 import About from './components/About';
 import Sustainability from './components/Sustainability';
 import FuntuaProjects from './components/FuntuaProjects';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/sustainability" component={Sustainability} />
         <Route path="/funtua" component={FuntuaProjects} />
+        <Route path="/contact" component={Contact} />
         <Route component={Default} />
       </Switch>
       <Footer />
