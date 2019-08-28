@@ -547,6 +547,11 @@ h2 {
 
 @media only screen and (max-width: 600px) {
 
+  .logo {
+      width: 30px;
+      height: 30px;
+  }
+
   .home__mantra {
     margin: 0;
     padding: 0.5rem;
