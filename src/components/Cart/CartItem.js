@@ -1,42 +1,48 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
-export default function CartItem({ item, value }) {
-  const { id, title, img, price, total, count } = item;
-  const { increment, decrement, removeItem } = value;
+export default function CartItem(props) {
+  const { id, title, price, total, count } = props.cart;
+  const { increment, decrement, removeItem } = props.value;
 
   return (
-    <div>
+    <div className="col-lg-4 col-xs-12" style={{marginTop:'20px'}}>
+      <img
+        src={props.cart.image.src}
+        style={{ width: '15rem', height: '15rem' }}
+        alt="product"
+      />
       <div>
-        <img
-          src={item.image.src}
-          style={{ width: '5rem', height: '5rem' }}
-          alt="product"
-        />
+        <b>{title}</b>
       </div>
-
       <div>
-        <span>product: {title}</span>
+        <b>{price}</b>
       </div>
-
+      <hr />
       <div>
-        <span>price: {price}</span>
+        <div class="cart__btn_container">
+            <div class="fixed">
+                <button clasName="btn" onClick={() => decrement(id)}>
+                -
+                </button>
+            </div>
+            <div style={{margin:'0 20px 0 20px'}}>
+              <span>{count}</span>
+            </div>
+            <div>
+              <button clasName="btn" onClick={() => increment(id)}>
+              +
+              </button>
+            </div>
+        </div>
       </div>
-
-      <div>
-        <span className="btn btn-black" onClick={() => decrement(id)}>
-          -
-        </span>
-        <span className="btn btn-black">{count}</span>
-        <span className="btn btn-black" onClick={() => increment(id)}>
-          +
-        </span>
-      </div>
+      <br/>
       <div className="cart-icon" onClick={() => removeItem(id)}>
         <i className="fas fa-trash" />
       </div>
       <div>
-        <strong>item total: ${total}</strong>
+        <p>Total: NGN{total === undefined ? price : total}</p>
       </div>
+      <hr />
     </div>
   );
 }

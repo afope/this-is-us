@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ResonsiveGrid = React.memo((props) => {
+const ResponsiveGrid = React.memo((props) => {
     return (
         <div className="row center-xs" >
             {props.children}
@@ -8,4 +8,4 @@ const ResonsiveGrid = React.memo((props) => {
     )
 });
 
-export default ResonsiveGrid;
+export default ResponsiveGrid;

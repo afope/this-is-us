@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ProductConsumer } from '../context';
-import { ButtonContainer } from './Button';
 
 export default class Product extends Component {
   render() {
-    const { id, title, image, price, img, src, inCart } = this.props.product;
+    const { id, title, image } = this.props.product;
     return (
           <ProductConsumer>
             {value => (

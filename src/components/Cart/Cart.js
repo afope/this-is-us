@@ -1,10 +1,7 @@
 import React, { Fragment, Component } from 'react';
-import Title from '../Title';
-import CartColumns from './CartColumns';
-import CartList from './CartList';
-import CartTotals from './CartTotals';
 import EmptyCart from './EmptyCart';
 import { ProductConsumer } from '../../context';
+import Cartcontainer from './Cartcontainer';
 
 export default class Cart extends Component {
 
@@ -38,10 +35,7 @@ export default class Cart extends Component {
             if (cart.length) {
               return (
                 <Fragment>
-                  <Title name="Your" title="cart" />
-                  <CartColumns />
-                  <CartList value={modifiedValue} />
-                  <CartTotals value={modifiedValue} />
+                  <Cartcontainer value={modifiedValue} />
                 </Fragment>
               );
             } else {

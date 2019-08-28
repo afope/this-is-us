@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
 // - components
-import ResonsiveGrid from './Utils/ResonsiveGrid';
+import ResponsiveGrid from './Utils/ResponsiveGrid';
 
 class Home extends Component {
   constructor() {
@@ -50,7 +50,7 @@ class Home extends Component {
           </div>
         </section>
         <section className="masonry__layout">
-          <ResonsiveGrid>
+          <ResponsiveGrid>
             {this.state.data.map((item, i) => {
                 return (
                   <div key={i} className="col-lg-4 col-xs-12">
@@ -63,7 +63,7 @@ class Home extends Component {
                   </div>
                 );
               })}
-          </ResonsiveGrid>
+          </ResponsiveGrid>
         </section>
       </Fragment>
     );

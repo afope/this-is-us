@@ -188,6 +188,16 @@ header {
     width: 100%;
 }
 
+.cart__btn_container {
+  display: flex;
+}
+.fixed{
+  width: 20px;
+}
+.flex-item{
+  flex-grow: 1;
+}
+
 .btn-black {
     background: transparent;
     text-transform: capitalize;
