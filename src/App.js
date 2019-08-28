@@ -10,6 +10,7 @@ import Details from './components/Details';
 import Cart from './components/Cart/Cart';
 import Default from './components/Default';
 import Home from './components/Home';
+import NavModal from './components/NavModal';
 import Modal from './components/Modal';
 import About from './components/About';
 import Footer from './components/Footer';
@@ -29,6 +30,7 @@ function App() {
       </Switch>
       <Footer />
       <Modal />
+      <NavModal />
     </Fragment>
   );
 }

@@ -40,12 +40,14 @@ class Home extends Component {
     return (
       <Fragment>
         <section className="home__mantra">
+          <div className="home__mantra-text">
           <strong>THISISUS&trade;</strong> We create value. We believe in the
           work of our hands. We use local resources to serve local communities.
           We imagine experiences and design possibilities. We work together. We
           celebrate what we have and create what we don't have. We are proud of
           our products. We are proud of our people. We are proud of our nation.{' '}
           <strong>THISISUS&trade;</strong>{' '}
+          </div>
         </section>
         <section className="masonry__layout">
           <ResonsiveGrid>

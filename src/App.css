@@ -22,6 +22,11 @@ body {
     height: 100%;
 }
 
+header {
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+}
+
 .text-title {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 0.3rem;
@@ -36,13 +41,13 @@ body {
 }
 
 .fas {
-    margin-right: 3px;
     color: white;
+    font-size: 1.5rem;
 }
 
 .fa-shopping-cart {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .cart-button__container {
@@ -52,16 +57,53 @@ body {
 
 .nav__container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
     align-items: center;
     background: var(--mainBlue);
 }
 
 .nav {
-    width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 1rem;
 }
+
+.nav__modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-modal__close {
+  text-align: right;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.nav-modal__menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.nav-modal__menu li {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-modal__menu li a {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+  line-height: 4rem;
+}
+
 
 .nav__link {
     margin: 5px;
@@ -83,41 +125,25 @@ body {
     justify-self: flex-end;
 }
 
-.nav__container a {
-    text-decoration: none;
-    justify-self: flex-end;
-    font-size: 0.8rem !important;
-    text-transform: capitalize;
-}
-
-.fa-chevron-down {
-    margin-bottom: 20px;
-    color: white;
-}
-
 .justify-start {
     margin-right: auto;
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     margin-right: auto;
+    margin-bottom: 2rem;
 }
 
-.home__banner {
-    width: 100%;
-    height: auto;
-    background-color: var(--lightBlue);
-    color: white;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 60px;
-    padding-bottom: 60px;
+.home__mantra {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.home__mantra-text {
+  width: 70%;
 }
 
 .home__banner-text {
@@ -206,10 +232,6 @@ body {
     padding-left: 3rem;
 }
 
-.masonry__layout {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
 
 .about {
     padding-top: 50px;
@@ -346,6 +368,21 @@ body.modal--open {
 }
 
 @media only screen and (max-width: 600px) {
+
+  .home__mantra {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .home__mantra__text {
+    width: 90%;
+  }
+
+
+  .masonry__layout {
+    margin: 0;
+  }
 
   .about .row p {
       width: 70%;
