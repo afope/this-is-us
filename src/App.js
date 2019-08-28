@@ -13,12 +13,8 @@ import Home from './components/Home';
 import NavModal from './components/NavModal';
 import Modal from './components/Modal';
 import About from './components/About';
-<<<<<<< HEAD
 import Sustainability from './components/Sustainability';
-||||||| merged common ancestors
-=======
 import FuntuaProjects from './components/FuntuaProjects';
->>>>>>> add funtua projects page
 import Footer from './components/Footer';
 
 
@@ -32,12 +28,8 @@ function App() {
         <Route path="/details/:id" component={Details} />
         <Route path="/cart" component={Cart} />
         <Route path="/about" component={About} />
-<<<<<<< HEAD
         <Route path="/sustainability" component={Sustainability} />
-||||||| merged common ancestors
-=======
         <Route path="/funtua" component={FuntuaProjects} />
->>>>>>> add funtua projects page
         <Route component={Default} />
       </Switch>
       <Footer />

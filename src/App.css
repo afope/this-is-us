@@ -377,13 +377,14 @@ body.modal--open {
   background: var(--mainBlue);
 }
 
+
 .funtua__mantra {
   display: flex;
   justify-content: center;
   background: var(--mainBlue);
   color: var(--mainWhite);
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .funtua__mantra-text {
@@ -391,19 +392,47 @@ body.modal--open {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 2.5rem;
   text-align: left;
-  font-size: 2rem;
 }
 
-.funtua__mantra-text h3 {
-  font-size: 2.5rem;
-  margin: 0;
+.funtua__mantra-text {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }
+
+
+.funtua__mantra-text h3 {
+    font-size: 1.8rem;
+}
+
 
 .funtua__mantra-text p {
   text-align: left;
+  line-height: 2rem;
+  font-size: 1.8rem;
 }
+
+.funtua__mantra-options {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.funtua__mantra-options h3 {
+    font-size: 1.8rem;
+}
+
+
+.funtua__mantra-options p {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.8rem;
+}
+
 
 .funtua_banner--image {
   width: 100%;
@@ -417,6 +446,53 @@ body.modal--open {
   margin: 3rem;
 }
 
+.funtua-projects__cotton {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  text-align: left;
+}
+
+.funtua-projects__cotton p {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.funtua-projects__cotton h3 {
+  text-align: left;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.funtua-projects__cotton__text {
+  width: 70%;
+}
+
+.funtua-projects__cotton-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.funtua-projects__cotton .funtua-projects__cotton-img {
+    width: 200px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 60%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
 .slide-container {
   margin: auto;
   background: #fff;
@@ -425,7 +501,7 @@ body.modal--open {
 
 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
@@ -507,4 +583,22 @@ h2 {
   .sustainability .row p {
       width: 80%;
   }
+
+  .funtua__mantra-text {
+    width: 90%;
+  }
+
+  .funtua-projects__cotton__text {
+    width: 90%;
+}
+
+  .funtua__mantra-options {
+    width: 90%;
+  }
+
+  .each-fade .image-container img {
+    width: 400px;
+    height: 400px;
+  }
+
 }
