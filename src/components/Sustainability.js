@@ -17,80 +17,47 @@ export default class Sustainability extends Component {
       <h3>Sustainability</h3>
         <div className="row">
           <img src={imageOne} className="sustainability-img" alt="about the cotton" />
+          <p><strong>Use it with love</strong></p>
           <p>
-            With the potential to contribute 25 percent (USD120bn) to Nigeria’s
-            GDP annually, the cultivation of cotton should be high up on the
-            list of immediate action plans to diversify Nigeria’s economy. A
-            thriving cotton industry has the potential to provide over 100,000
-            jobs for farm workers, crop processors, consultants, distributors
-            and operators of farm machinery. Furthermore, the industry directly
-            stimulates the textile and cotton seed processing industries, as
-            well as banking, warehousing, transportation and merchandising
-            industries.
+            1. We offer redyeing services. <br />
+            2. We offer reviving services. <br />
+            3. Upcycle your packaging
           </p>
         </div>
 
         <div className="row">
           <img src={imageTwo} alt="about the cotton" className="sustainability-img" />
-          <p>
-            The cotton plant grows in most parts of the North and South-Western
-            regions of Nigeria. And production has been carried out since the
-            early 1900s, after the introduction of seeds by the British Cotton
-            Growers Association. Once harvested, cotton crop is moved to a
-            Ginnery, where cotton lint is separated from cottonseed. These two
-            products, cottonseed and lint, have high cash value — each one at
-            least 10 times the value of harvested cotton. Lint is employed in
-            textile manufacturing for producing all types of clothing and home
-            furnishing like bedspreads and curtains.
-          </p>
+            <p><strong>Get rid of it with love</strong></p>
+            <p>
+              We offer recycling/upcycling services so whenyou're done with it, you can get rid of it.
+            </p>
         </div>
 
         <div className="row">
           <img src={imageThree} alt="about the cotton" className="sustainability-img" />
-
-          <p>
-            From 25 percent in 1980, the cotton industry contribution to GDP has
-            reduced to 5 percent in 2015. Nigeria was the hotbed of the Cotton
-            industry in West Africa throughout the later part of the 20th
-            century and into the early part of the 21st. Production was 30,000
-            metric tonnes in 1954, and increased to 60,000 metric tonnes in
-            1979, after which it started to decline and reached 30,000 metric
-            tonnes during 1988.
-          </p>
+            <p><strong>Fair wage</strong></p>
+            <p>
+              We pay a fair wage to all of our employees and suppliers and ensure they do the same
+            </p>
         </div>
 
         <div className="row">
           <img src={imageFour} alt="about the cotton" className="sustainability-img" />
 
-          <p>
-            The steady decline in the cotton industry can be attributed to many
-            factors, stemming from the neglect of the industry by key
-            stakeholders during the oil boom period, which saw a shift in
-            priority from exportation of agricultural produce to crude oil. This
-            shift contributed to the gradual decay of the agricultural sector as
-            a whole. Regulations restricting importation of high yield seeds do
-            not favor cotton growers.
-          </p>
+            <p><strong>Homegrown</strong></p>
+            <p>
+              Local grown, processed and naturally dyed cotton using locally run textile mills and dye pits
+            </p>
         </div>
 
         <div className="row">
           <img src={imageSix} alt="about the cotton" className="sustainability-img" />
 
-          <p>
-            To quickly improve and encourage cotton cultivation, government
-            together with relevant stakeholders and technical partners should:
-            1) conduct research and studies on the most suitable homegrown
-            practices for soil fertility and water management, pest and disease
-            control and efficient methods of harvesting and storage; 2) design
-            and implement policies that ensure good quality seeds are available
-            to farmers — seed policies must however consider existing global
-            issues surrounding the viability of genetically modified seeds,
-            which result in high yields but have come under fire for potentially
-            adverse effects on health and the environment; 3) redesign schemes
-            like the 2010 N100 billion Textile and Manufacturing Revitalization
-            Program to enhance the ability of farmers to increase affordable
-            cotton supply.
-          </p>
+            <p><strong>Low waste products</strong></p>
+            <p>
+              1. Revived shirt, using fabric to cover damaged shirt.<br />
+            2. Patchwork shirt, using scrap fabric to create design. <br />
+            </p>
         </div>
       </div>
     );
