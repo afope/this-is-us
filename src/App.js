@@ -13,6 +13,7 @@ import Home from './components/Home';
 import NavModal from './components/NavModal';
 import Modal from './components/Modal';
 import About from './components/About';
+import Sustainability from './components/Sustainability';
 import Footer from './components/Footer';
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/details/:id" component={Details} />
         <Route path="/cart" component={Cart} />
         <Route path="/about" component={About} />
+        <Route path="/sustainability" component={Sustainability} />
         <Route component={Default} />
       </Switch>
       <Footer />
