@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { ProductConsumer } from '../context';
 import { Link } from 'react-router-dom';
 import { ButtonContainer } from './Button';
@@ -33,7 +33,6 @@ export default class Details extends Component {
   render() {
     const { product } = this.state;
     const { title, body_html, image, id} = product;
-    const { detailProduct } = this.props;
 
 
     return (
@@ -49,15 +48,15 @@ export default class Details extends Component {
           return (
             <div>
               <div className="product__details">
-                {image ? (
+                {isEmpty(product) ? (
+                   <p>no image yet</p>
+                   // replace this with a proper loading icon
+                ) :
+                <Fragment>
                   <div className="details">
-                  <img src={image.src} className="product__image" />
+                    <img src={image.src} className="product__image" />
                   </div>
-                ) : <p>no image yet</p>
-              }
-
-
-                <div className="product__info">
+                  <div className="product__info">
                   <h4>
                     {title}
                   </h4>
@@ -73,15 +72,17 @@ export default class Details extends Component {
                     </ButtonContainer>
                   </Link>
                   <ButtonContainer
-                  cart
-                  disabled={inCart? true: false}
-                  onClick={() => {
-                    value.addToCart(id, value.detailProduct.variants[0].price);
-                    value.openModal(id);
-                  }}>
+                    cart
+                    disabled={inCart? true: false}
+                    onClick={() => {
+                      value.addToCart(id, value.detailProduct.variants[0].price);
+                      value.openModal(id);
+                    }}>
                     {inCart ? 'In Cart' : 'Add to Cart'}
                   </ButtonContainer>
                 </div>
+              </Fragment>
+              }
               </div>
             </div>
           )
