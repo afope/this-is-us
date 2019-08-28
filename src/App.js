@@ -14,6 +14,7 @@ import NavModal from './components/NavModal';
 import Modal from './components/Modal';
 import About from './components/About';
 import Sustainability from './components/Sustainability';
+import FuntuaProjects from './components/FuntuaProjects';
 import Footer from './components/Footer';
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/cart" component={Cart} />
         <Route path="/about" component={About} />
         <Route path="/sustainability" component={Sustainability} />
+        <Route path="/funtua" component={FuntuaProjects} />
         <Route component={Default} />
       </Switch>
       <Footer />
