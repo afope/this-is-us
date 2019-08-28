@@ -10,6 +10,7 @@ class ProductProvider extends Component {
     products: [],
     detailProduct: {},
     cart: [],
+    navOpen: false,
     modalOpen: false,
     modalProduct: [],
     cartSubTotal: 0,
@@ -83,6 +84,10 @@ class ProductProvider extends Component {
     this.setState(() => {
       return { modalOpen: false };
     });
+  };
+
+  toggleNav = () => {
+    this.setState(prevProps => ({ navOpen: !prevProps.navOpen }));
   };
 
   increment = id => {
@@ -197,6 +202,7 @@ class ProductProvider extends Component {
           ...this.state,
           handleDetail: this.handleDetail,
           addToCart: this.addToCart,
+          toggleNav: this.toggleNav,
           openModal: this.openModal,
           closeModal: this.closeModal,
           increment: this.increment,
